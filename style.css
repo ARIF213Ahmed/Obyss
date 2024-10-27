@@ -1,0 +1,112 @@
+@font-face {
+    font-family: P-light;
+    src: url(fonts/plain-light-webfont.woff);
+}
+@font-face {
+    font-family: P-regular;
+    src: url(fonts/plain-regular-webfont.woff);
+}
+@font-face {
+    font-family: S-litalic;
+    src: url(fonts/silkserif-lightitalic-webfont.woff);
+}
+@font-face {
+    font-family: S-Ritalic;
+    src: url(fonts/silkserif-regularitalic-webfont.woff);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    scrollbar-width: none;
+    background-color: #0B0B0B;
+}
+
+#loader{
+    width: 100%;
+    height: 100vh;
+    background-color: #0B0B0B;
+    position: fixed;
+    padding: 20vh 12vw;
+    
+}
+
+.line{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    width: 80vw;
+    overflow: hidden;
+    gap: 3vw;
+    /* background-color: red; */
+}
+.line h1,h2{
+    font-family: P-regular;
+    color: white;
+    font-size: 6.5vw;
+    font-weight: 400;
+}
+
+#line-part1{
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: .5vw;
+
+}
+#line-part1 h5,h6{
+    font-family: S-litalic;
+    font-size: 3vw;
+    font-weight: 100;
+    
+}
+#line-part1 h5{
+    width: 6vw;
+    text-align: center;
+}
+.line h2{
+    font-size: 5vw;
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes anime {
+    0%{
+        font-family: P-regular;
+        color: white;
+        font-weight: 400;
+
+    }
+    48%{
+        font-family: P-regular;
+        color: white;
+        font-weight: 400;
+    }
+    50%{
+        font-family: S-Ritalic;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+    }
+    100%{
+        font-family: S-Ritalic;
+        -webkit-text-stroke: 1px white;
+        color: transparent;
+    }
+}
+#main{
+    height: 100vh;
+    width: 100%;
+    background-color: #0B0B0B;
+}
+.page1{
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+}
