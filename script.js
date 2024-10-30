@@ -1,4 +1,5 @@
-var tl = gsap.timeline();
+function loadinganimation(){
+    var tl = gsap.timeline();
 tl.from(".line h1",{
     y:150,
     stagger:0.3,
@@ -33,10 +34,57 @@ tl.from(".page1",{
     delay:0.2,
     y:1600,
     opacity:0,
-    ease:Power4
+    ease:Power4,
 })
-tl.to("#loader",{
-    display:none
+tl.from(".nav",{
+    opacity:0
 })
+tl.from(".hero h1",{
+    y:120,
+    stagger:0.2,
+    duration:0.6,
+    delay:0.6
+})
+
+
+}
+loadinganimation();
+
+function cursor(){
+    document.addEventListener("mousemove", function(dets) {
+        gsap.to(".cursor", {
+            left: dets.x,
+            top: dets.y,
+            duration: 0.1
+        });
+    });
+    
+    
+    const navLinks = document.querySelectorAll("#cur");
+    
+    navLinks.forEach(link => {
+        link.addEventListener("mouseenter", function() {
+            gsap.to(".cursor", {
+                scale: 1.3,
+                duration: 0.2
+            });
+        });
+    
+        link.addEventListener("mouseleave", function() {
+            gsap.to(".cursor", {
+                scale: 1, 
+                duration: 0.2
+            });
+        });
+    });
+    Shery.makeMagnet("#cur" , {
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
+      });
+    
+    
+}
+cursor();
+
 
 
