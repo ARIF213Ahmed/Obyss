@@ -214,7 +214,7 @@ function footerAnimation() {
 cursor();
 loco();
 footerAnimation();
-// loadinganimation();
+loadinganimation();
 sheryAnimation();
 flag();
 
